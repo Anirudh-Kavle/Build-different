@@ -60,7 +60,7 @@ const questions = [
     items: [
       <>
         Does the time and pain investment translate into visible complexity or{" "}
-        <SparklesText className="text-[20px] inline" sparklesCount="7">polish</SparklesText>?
+        <SparklesText className="text-[20px] inline" sparklesCount={7}>polish</SparklesText>?
       </>,
       <>
       Would the result reflect <AuroraText>craftsmanship</AuroraText> or long-term iteration?
