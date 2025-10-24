@@ -2,10 +2,15 @@
 
 export default function Hero() {
   return (
-    <header className="relative z-10 w-screen bg-white border-b-4 border-black">
-      {/* Navbar */}
-      <nav className="flex items-center justify-between px-6 md:px-12 lg:px-20 py-3">
-        <div className="flex items-center gap-2">
+    <header className="relative z-10 w-screen bg-gradient-to-r from-yellow-200 via-pink-100 to-blue-200 border-b-4 border-black overflow-hidden">
+      {/* Decorative blobs */}
+      <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400 rounded-full opacity-60 blur-3xl"></div>
+      <div className="absolute top-0 right-20 w-32 h-32 bg-pink-300 rounded-full opacity-50 blur-2xl"></div>
+      <div className="absolute bottom-0 -right-10 w-48 h-48 bg-blue-400 rounded-full opacity-60 blur-3xl"></div>
+      
+      {/* Combined Navbar and Hero */}
+      <div className="relative z-10 flex items-center justify-center px-6 md:px-12 lg:px-20 py-4">
+        <div className="absolute left-6 md:left-12 lg:left-20 flex items-center gap-2">
           <img
             src="/esc.jpg"
             alt="ESC logo"
@@ -13,26 +18,11 @@ export default function Hero() {
           />
           <span className="font-bold text-lg tracking-tight"></span>
         </div>
-
-        {/* Optional future nav links */}
-        {/* <div className="hidden md:flex gap-4 text-base font-medium">
-          <a href="#" className="hover:underline">Checklist</a>
-          <a href="#" className="hover:underline">About</a>
-        </div> */}
-      </nav>
-
-      {/* Hero section */}
-      {/* <section className="flex flex-col items-center justify-center text-center py-20 px-6 md:px-12 lg:px-20 space-y-5">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight max-w-3xl">
-          Break from the norm.<br />
-          <span className="underline decoration-3 decoration-black underline-offset-4">
-            Check if your idea stands out.
-          </span>
+        
+        <h1 className="text-base md:text-lg lg:text-xl font-bold tracking-tight whitespace-nowrap">
+          Break from the norm. Check if your idea stands out.
         </h1>
-        <p className="text-base md:text-lg font-medium text-gray-700">
-          Evaluate. Innovate. Stand Out.
-        </p>
-      </section> */}
+      </div>
     </header>
   );
 }

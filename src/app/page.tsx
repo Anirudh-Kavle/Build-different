@@ -28,7 +28,7 @@ export default function Home() {
         </section>
 
         {/* Right: Results + Radar */}
-        <section className="bg-[#868EFF] overflow-y-auto flex flex-col items-center px-8 py-16 text-white h-[70vh] sm:h-[80vh] lg:h-screen">
+        <section className="bg-[#868EFF] overflow-y-auto flex flex-col items-center px-8 py-12 text-white h-[70vh] sm:h-[80vh] lg:h-screen">
           <div className="flex flex-col items-center w-full max-w-3xl mt-4 sm:mt-8 space-y-8 sm:space-y-12 px-2 sm:px-0">
             {/* Score zone / Alert box */}
             {totalChecked > 0 && zone && (
