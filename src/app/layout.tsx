@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -11,17 +11,19 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Build Different",
   description: "Break from the norm, check if your idea stands out",
+  viewport: { width: "device-width", initialScale: 1 },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`${dmSans.variable} antialiased`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${dmSans.variable} antialiased bg-[#f8fafc]`}>
+        {/* Future: <Navbar /> or <Footer /> could be imported here */}
+        <main>{children}</main>
       </body>
     </html>
   );
